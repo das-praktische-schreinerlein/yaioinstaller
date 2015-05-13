@@ -1,0 +1,2 @@
+s/^ *<karmaExecutable>.*/                    <karmaExecutable>${basedir}\/node_modules\/karma\/bin\/karma<\/karmaExecutable>/
+s/^ *<build>.*/    <build>\n        <testResources>\n<testResource>\n<directory>${project.basedir}\/src\/test\/java<\/directory>\n<excludes>\n<exclude>**\/*.java<\/exclude>\n<\/excludes>\n<\/testResource>\n<testResource>\n<directory>${project.basedir}\/src\/test\/resources<\/directory>\n<\/testResource>\<\/testResources>/

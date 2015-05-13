@@ -1,0 +1,1 @@
+s/^.*args\[1\] = ".*application.properties";.*/        args[1] = "\.\/config\/application.properties";/
