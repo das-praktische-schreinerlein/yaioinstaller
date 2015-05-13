@@ -13,7 +13,7 @@ export SCRIPT_DIR=${BASE_DIR}
 
 /etc/init.d/yaio-demoapp.sh stop
 rm -fr /home/${YAIOUSER}
-update-rc.d yaio-demoapp.sh remove
 rm /etc/init.d/yaio-demoapp.sh
+update-rc.d yaio-demoapp.sh remove
 userdel ${YAIOUSER}
 
