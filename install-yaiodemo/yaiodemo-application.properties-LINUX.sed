@@ -1,0 +1,11 @@
+s/^config.spring.applicationconfig.path=.*/config.spring.applicationconfig.path=.\/config\/applicationContext.xml/
+s/^server.port=.*/server.port=8666/
+s/^server.address=.*/server.address=0.0.0.0/
+s/^yaio.security.apiusers.filelocation=.*/yaio.security.apiusers.filelocation=\/home\/yaiodemo\/your-all-in-one\/config\/security-apiusers.properties/
+s/^propagator.upnp.device.starturl.port=.*/propagator.upnp.device.starturl.port=8666/
+s/^yaio.exportcontroller.examples.location=.*/yaio.exportcontroller.examples.location=file:\/\/\/home\/yaiodemo\/your-all-in-one\/resources\/examples\//
+s/^yaio.exportcontroller.replacerdef.location=.*/yaio.exportcontroller.replacerdef.location=\/home\/yaiodemo\/your-all-in-one\/config\/exportcontroller-replacerdef.properties/
+s/^yaio.exportcontroller.replace.baseref=.*/yaio.exportcontroller.replace.baseref=\//
+s/^yaio.my-domain=.*/yaio.my-domain=yaio-playground.local/
+s/^yaio.security.xframe-allowed-domains=.*/yaio.security.xframe-allowed-domains=yaio-playground.local,yaio-prod.local,www.your-all-in-one.de,www.dartagnan.biz/
+s/^databaseHsqldb.url=.*/databaseHsqldb.url=jdbc\\:hsqldb\\:file\\:\/home\/yaiodemo\/your-all-in-one\/var\/hsqldb\/yaio;shutdown\\=true;hsqldb.write_delay\\=false;/
