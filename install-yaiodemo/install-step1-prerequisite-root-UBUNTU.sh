@@ -2,6 +2,11 @@
 ###################
 ## prepare system for yaio-install
 ###################
+SCRIPT_DIR=$(dirname $0)/
+OS_SUFFIX=-LINUX
+
+# load utils
+. ${SCRIPT_DIR}/utils${OS_SUFFIX}.sh
 
 # set timezone
 echo 'Europe/Berlin' | tee /etc/timezone > /dev/null
@@ -22,13 +27,12 @@ apt-cache showpkg java
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" openjdk-7-jdk
 
 # install maven
-sudo apt-get -y remove maven
-sudo apt-get -y remove maven3
-sudo apt-get -y install gdebi
+apt-get -y remove maven
+apt-get -y install gdebi
 wget http://ppa.launchpad.net/natecarlson/maven3/ubuntu/pool/main/m/maven3/maven3_3.2.1-0~ppa1_all.deb
-sudo gdebi --non-interactive maven3_3.2.1-0~ppa1_all.deb
-sudo ln -s /usr/share/maven3/bin/mvn /usr/bin/maven
-sudo ln -s /usr/share/maven3/bin/mvn /usr/bin/mvn
+gdebi --non-interactive maven3_3.2.1-0~ppa1_all.deb
+ln -s /usr/share/maven3/bin/mvn /usr/bin/maven
+ln -s /usr/share/maven3/bin/mvn /usr/bin/mvn
 
 # install nodejs 10
 apt-cache showpkg nodejs
@@ -50,4 +54,3 @@ apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="-
 # Make sure that Xvfb starts everytime the box/vm is booted:
 echo "Starting X virtual framebuffer (Xvfb) in background..."
 Xvfb -ac $XVFB_DISPLAY -screen 0 1280x1024x16 &
-export DISPLAY=$XVFB_DISPLAY
