@@ -12,7 +12,7 @@ cd your-all-in-one/
 chmod 755 sbin -R
 mkdir logs
 
-# install karma local
-npm install karma --save-dev
-npm install karma-phantomjs-launcher karma-jasmine karma-qunit karma-chrome-launcher karma-firefox-launcher plugin --save-dev
-
+# install all local
+npm install
+./node_modules/.bin/webdriver-manager update
+./node_modules/.bin/webdriver-manager start & > logs/webdriver-manager.log 2>&1

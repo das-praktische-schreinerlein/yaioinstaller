@@ -29,7 +29,10 @@ cp ${CONFIG_DIR}/log4j.properties ${BASE_DIR}/src/test/java/
 replaceConfigFileBySed ${BASE_DIR}/pom.xml ${SCRIPT_DIR}/${USER_PRAEFIX}pom.xml${OS_SUFFIX}.sed
 
 # karma.yaio.conf.js
-replaceConfigFileBySed ${BASE_DIR}/karma.yaio.conf.js ${SCRIPT_DIR}/${USER_PRAEFIX}karma.yaio.conf.js.xml${OS_SUFFIX}.sed
+replaceConfigFileBySed ${BASE_DIR}/karma.yaio.conf.js ${SCRIPT_DIR}/${USER_PRAEFIX}karma.yaio.conf.js${OS_SUFFIX}.sed
+
+# protractor.yaio.conf.js
+replaceConfigFileBySed ${BASE_DIR}/protractor.yaio.conf.js ${SCRIPT_DIR}/${USER_PRAEFIX}protractor.yaio.conf.js${OS_SUFFIX}.sed
 
 # BaseNodeRestController
 replaceConfigFileBySed ${BASE_DIR}/src/test/java/de/yaio/rest/controller/BaseNodeRestControllerTest.java ${SCRIPT_DIR}/${USER_PRAEFIX}BaseNodeRestControllerTest.java${OS_SUFFIX}.sed

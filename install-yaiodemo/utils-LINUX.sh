@@ -12,3 +12,6 @@ function replaceConfigFileBySed {
 }
 
 export replaceConfigFileBySed
+
+export XVFB_DISPLAY=:99
+export DISPLAY=$XVFB_DISPLAY
