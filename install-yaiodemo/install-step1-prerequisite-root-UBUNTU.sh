@@ -40,12 +40,15 @@ apt-get remove node
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" nodejs=0.10.25~dfsg2-2ubuntu1
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" npm
 # link because of collision with node-package
-ls -l /usr/bin/nodejs /usr/sbin/node
+apt-get remove node
 ln -s /usr/bin/nodejs /usr/sbin/node
 
 # install git
 apt-cache showpkg git
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" git
+
+# install graphviz
+apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" graphviz
 
 # install chrome+xvfb for e2e-tests
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" chromium-browser
