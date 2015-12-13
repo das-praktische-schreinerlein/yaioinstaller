@@ -43,12 +43,24 @@ apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="-
 apt-get remove node
 ln -s /usr/bin/nodejs /usr/sbin/node
 
+# cleanup
+apt-get autoremove -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
+
 # install git
 apt-cache showpkg git
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" git
 
-# install graphviz
+# install graphviz for yaio-plantuml-service
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" graphviz
+
+# install wkhtmltopdf for yaio-webshot-service
+wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+sudo apt-get -f install
+sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+
+# install ghostscript for yaio-metaextract-service (tess4j)
+apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ghostscript
 
 # install chrome+xvfb for e2e-tests
 apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" chromium-browser

@@ -9,3 +9,6 @@ s/^yaio.exportcontroller.replace.baseref=.*/yaio.exportcontroller.replace.basere
 s/^yaio.my-domain=.*/yaio.my-domain=yaio-playground.local/
 s/^yaio.security.xframe-allowed-domains=.*/yaio.security.xframe-allowed-domains=yaio-playground.local,yaio-prod.local,www.your-all-in-one.de,www.dartagnan.biz/
 s/^databaseHsqldb.url=.*/databaseHsqldb.url=jdbc\\:hsqldb\\:file\\:\/home\/yaiodemo\/your-all-in-one\/var\/hsqldb\/yaio;shutdown\\=true;hsqldb.write_delay\\=false;/
+s/localhost\:8083\/services/localhost:8666\/services/
+s/D\:\\\\Programme\\\\wkhtmltopdf\\\\bin\\\\/\/usr\/local\/bin\//
+s/\.exe$//
