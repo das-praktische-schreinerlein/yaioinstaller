@@ -56,7 +56,7 @@ apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="-
 # install wkhtmltopdf for yaio-webshot-service
 wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
 sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
-sudo apt-get -f install
+sudo apt-get -y -f install
 sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
 
 # install ghostscript for yaio-metaextract-service (tess4j)
